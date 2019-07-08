@@ -1,0 +1,262 @@
+/*
+Theme Name: Twenty Sixteen
+Description: IE8 specific style.
+*/
+html {
+	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka","sans-serif";
+    font-size: 14px;
+    line-height: 1.6;
+    word-break: break-all;
+}
+.site-header {
+  /*display: none;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 40px 24px 0;
+  background: transparent;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+  z-index: 2;
+  background: blue;
+  height: 60px;
+
+}
+.globalMenuSp{
+    /*display: none;*/
+}
+.active {
+    /*display: block;*/
+}
+
+#main {
+	border-top: 1px solid #cccccc;
+    display: block;
+    padding: 30px 0;
+}
+
+main#main.top{
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+.navToggle {
+    display: block;
+    position: fixed;    /* bodyに対しての絶対位置指定 */
+    right: 13px;
+    top: 12px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 3;
+    /*background: #666;*/
+    background: transparent;
+    text-align: center;
+}
+ 
+.navToggle span {
+    display: block;
+    position: absolute;    /* .navToggleに対して */
+    width: 30px;
+    /*border-bottom: solid 3px #eee;*/
+    border-bottom: solid 3px gray;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    left: 6px;
+}
+ 
+.navToggle span:nth-child(1) {
+    top: 9px;
+}
+ 
+.navToggle span:nth-child(2) {
+    top: 18px;
+}
+ 
+.navToggle span:nth-child(3) {
+    top: 27px;
+}
+ 
+.navToggle span:nth-child(4) {
+    border: none;
+
+    color: #eee;
+    font-size: 9px;
+    font-weight: bold;
+    top: 34px;
+}
+
+/* 最初のspanをマイナス45度に */
+.navToggle.active span:nth-child(1) {
+    top: 18px;
+    left: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+ 
+/* 2番目と3番目のspanを45度に */
+.navToggle.active span:nth-child(2),
+.navToggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+nav.globalMenuSp {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: all 0.6s;
+    width: 100%;
+}
+ 
+nav.globalMenuSp ul {
+    background: #ccc;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+ 
+nav.globalMenuSp ul li {
+    font-size: 1.1em;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px dotted #333;
+}
+ 
+/* 最後はラインを描かない */
+nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+ 
+nav.globalMenuSp ul li a {
+    display: block;
+    color: #000;
+    padding: 1em 0;
+}
+ 
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+    transform: translateY(0%);
+}
+
+
+
+
+
+
+/*@media screen and (min-width: 56.875em){*/
+    @media screen and (min-width: 640px){
+    .sp {
+    display: none !important;
+  }
+}
+
+/*
+.sp {
+    display: none !important;
+  }
+*/
+/* --------------------------------------------------- */
+/* global header */
+/* --------------------------------------------------- */
+
+#masthead{
+    display: none;
+}
+
+
+.global-header.scroll {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgba(255,255,255,.9);
+}
+
+
+/*SP*/
+.content-area {
+    z-index: 1;
+}
+
+.site-header-sp {
+    height: 260px
+    background: blue;
+    padding: 0;
+}
+
+
+
+/* --------------------------------------------------- */
+/* blog  index */
+/* --------------------------------------------------- */
+
+
+.top-list-area{
+    overflow: hidden;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.top-list-thumbnail{
+    width: 100%;
+    opacity: 0.3;
+}
+
+.top-list-title-area{
+  width:100%;
+  height: 150pc;
+  overflow: hidden;
+}
+
+.top-list-title-area-sp{
+    display: block;
+    width:100%;
+    overflow: hidden;
+}
+
+.top-list-title-area-sp > h3 {
+    font-size: 5vw;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    font-weight: inherit;
+    color: black;
+}
+
+
+.top-list-title-area{
+    display: none;
+}
+
+.widget .widget-title{
+    font-size: 6vw;
+    /*font-size:3rem*/
+}
+
+.recet_article_title_area{
+    font-size: 5vw;
+}
+
+.widget  > ul >li {
+    font-size: 5vw;
+}
+
+
+.post-navigation{
+    margin: 0;
+}
+
