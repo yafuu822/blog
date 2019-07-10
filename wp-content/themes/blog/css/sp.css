@@ -194,7 +194,7 @@ nav.globalMenuSp.active {
 }
 
 .site-header-sp {
-    height: 260px
+    height: 260px;
     background: blue;
     padding: 0;
 }
